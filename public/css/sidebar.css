@@ -1,0 +1,73 @@
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+}
+
+.logo {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin: 20px 0;
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 18px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+/* SUBMENU */
+.submenu {
+    list-style: none;
+    padding: 0;
+    display: none;
+    /* initially hidden */
+    /* background: #fff; */
+}
+
+.submenu li a {
+    padding: 10px 40px;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+}
+
+.submenu li a:hover {
+    background: rgba(255, 255, 255, 0.45);;
+    border-left: 3px solid #4CAF50;
+}
+
+/* Down arrow */
+.arrow {
+    float: right;
+    transition: 0.3s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}

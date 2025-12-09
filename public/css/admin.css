@@ -1,0 +1,308 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #8ec5fc, #e0c3fc);
+    min-height: 100vh;
+    display: flex;
+}
+
+/* PAGE HEADER */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.page-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.btn-back {
+    background: #4CAF50;
+    color: #fff;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* FORM CONTAINER */
+.form-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #4CAF50;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+}
+
+.logo {
+    color: #000;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin: 20px 0;
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 18px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: rgba(255, 255, 255, 0.016);
+
+}
+
+/* SUBMENU */
+.submenu {
+    list-style: none;
+    padding: 0;
+    display: none;
+    /* initially hidden */
+    /* background: #fff; */
+}
+
+.submenu li a {
+    padding: 10px 40px;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+}
+
+.submenu li a:hover {
+    background: rgba(255, 255, 255, 0.45);
+    ;
+    border-left: 3px solid #4CAF50;
+}
+
+/* Down arrow */
+.arrow {
+    float: right;
+    transition: 0.3s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* MAIN CONTENT */
+.main {
+    margin-left: 230px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* HEADER / NAVBAR */
+.main-header {
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 18px 25px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.main-header h2 {
+    color: #222;
+    font-weight: 700;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-actions input {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 250px;
+}
+
+.notification {
+    font-size: 20px;
+    color: #4f46e5;
+    cursor: pointer;
+}
+
+.user {
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ==== */
+/* FOOTER */
+.footer {
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(6px);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 6px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.pagination button.active {
+    background: #4CAF50;
+    color: #fff;
+    border-color: #4CAF50;
+}
+
+.pagination button:hover {
+    background: #4CAF50;
+    color: #fff;
+}
+
+/* .select2-dropdown {
+    z-index: 99999 !important;
+} */
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 1024px) {
+    .header-actions input {
+        width: 180px;
+    }
+}
+
+@media(max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .main {
+        margin-left: 180px;
+    }
+
+    .header-actions input {
+        width: 140px;
+    }
+}
+
+@media(max-width: 600px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu {
+        display: flex;
+        gap: 15px;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .header-actions input {
+        width: 100px;
+    }
+}
+
+
+.field-row {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    background: red;
+    color: #fff;
+    padding: 3px 8px;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
